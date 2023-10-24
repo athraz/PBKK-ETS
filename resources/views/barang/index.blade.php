@@ -30,9 +30,9 @@
                     <div class="w-1/2 p-4" style="height: 100%; overflow: hidden;">
                         <p class="text-gray-600">Jenis: {{$barang->jenis->nama}}</p>
                         <p class="text-gray-600">Kondisi: {{$barang->kondisi->nama}}</p>
-                        <p class="text-gray-600">Keterangan: {{$barang->keterangan}}</p>
+                        <p class="text-gray-600">Keterangan: {{strlen($barang->keterangan) > 50 ? substr($barang->keterangan, 0, 50) . "..." : $barang->keterangan}}</p>
                         @if (isset($barang->kecacatan))
-                        <p class="text-gray-600">Kecacatan: {{$barang->kecacatan}}</p>
+                        <p class="text-gray-600">Kecacatan: {{strlen($barang->kecacatan) > 50 ? substr($barang->kecacatan, 0, 50) . "..." : $barang->kecacatan}}</p>
                         @endif
                         <p class="text-gray-600 mb-2">Jumlah: {{$barang->jumlah}}</p>
                         <a href="/barang/{{$barang->id}}">
