@@ -49,7 +49,7 @@
         <!-- Jumlah -->
         <div class="mt-4">
             <x-input-label for="jumlah" :value="__('Jumlah')" />
-            <x-text-input id="jumlah" class="block mt-1 w-full" type="text" name="jumlah" :value="old('jumlah')" required autofocus autocomplete="jumlah" />
+            <x-text-input id="jumlah" class="block mt-1 w-full" type="text" name="jumlah" :value="old('jumlah')" autofocus autocomplete="jumlah" />
             <x-input-error :messages="$errors->get('jumlah')" class="mt-2" />
         </div>
 
