@@ -1,9 +1,16 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex justify-between items-center">
+            @if (session('status'))
+            <div class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ session('status') }}
+            </div>
+            @else
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Berikut Barang yang Tersedia!') }}
             </h2>
+            @endif
+            
             <a href="/barang/create">
                 <x-primary-button>
                     {{ __('Tambah Barang') }}

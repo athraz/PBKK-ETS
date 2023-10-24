@@ -73,7 +73,7 @@ class BarangController extends Controller
             }
         }
 
-        return redirect('/barang');
+        return redirect('/barang')->with(['status' => 'Berhasil menambahkan barang!']);
     }
 
     public function show($id)
@@ -160,7 +160,7 @@ class BarangController extends Controller
             }
         }
         
-        return redirect('/barang');
+        return redirect('/barang')->with(['status' => 'Berhasil mengubah barang!']);
     }
 
     public function destroy($id)
